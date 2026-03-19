@@ -1,0 +1,170 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Pacotes e configuração visual
+\usepackage[
+    ignoreheadfoot,
+    top=1.8 cm,
+    bottom=1.8 cm,
+    left=1.8 cm,
+    right=1.8 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Vitor Jacom - Currículo},
+    pdfauthor={V\'itor Jacom},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\begin{document}
+
+% ====== Cabeçalho ======
+\begin{header}
+    {\fontsize{25 pt}{25 pt}\selectfont V\'itor Jacom}
+
+    \vspace{5 pt}
+
+    \normalsize
+    Porto Alegre -- RS -- Brasil \quad \href{mailto:vjds.vitor@gmail.com}{vjds.vitor@gmail.com} \quad \href{tel:+55 51 99578 3576}{(51) 99578-3576} \\
+    \href{https://www.linkedin.com/in/vitorjacom/}{linkedin.com/in/vitorjacom} \quad \href{https://github.com/VitorJacom}{github.com/VitorJacom}
+\end{header}
+
+% ====== Resumo Profissional ======
+\section*{Resumo Profissional}
+Engenheiro de Software Back-end com forte atua\c{c}\~ao em \textbf{Java 17+} e \textbf{Spring Boot}, focado no desenvolvimento de \textbf{Cloud-native Apps} e \textbf{Microservi\c{c}os}. Experi\^encia pr\'atica com arquitetura de software (\textbf{DDD}, \textbf{SOLID}, \textbf{Design Patterns}), migra\c{c}\~ao de sistemas e desenvolvimento de solu\c{c}\~oes escal\'aveis utilizando \textbf{AWS} e \textbf{Oracle Cloud}. Profici\^encia certificada em \textbf{GitHub Foundations}, integra\c{c}\~ao cont\'inua (\textbf{CI/CD}), \textbf{Docker} e bancos de dados SQL/NoSQL. Perfil colaborativo e anal\'itico, com foco na entrega de c\'odigo limpo, cobertura de testes e boas pr\'aticas de seguran\c{c}a.
+
+% ====== Tecnologias ======
+\section*{Compet\^encias T\'ecnicas}
+\textbf{Back-end e Linguagens:} Java 11/17+, Kotlin, Spring Boot, Spring Data JPA, Spring MVC, Python, Node.js \\
+\textbf{Arquitetura e Padr\~oes:} Microservices, RESTful APIs, DDD, TDD, SOLID, Design Patterns, HTTP \\
+\textbf{Infraestrutura e Cloud:} AWS (S3, Lambda, Aurora), Oracle Cloud (VPS/Compute), Docker, Tomcat \\
+\textbf{Banco de Dados:} PostgreSQL, MySQL, Azure SQL, Redis (NoSQL), Modelagem de Dados \\
+\textbf{DevOps e Ferramentas:} Git, GitHub Actions, GitLab CI/CD, Maven, Postman \\
+\textbf{Testes e Qualidade:} JUnit, Mockito, Testes Unitários e de Integração \\
+\textbf{Front-end:} React.js, Next.js, TypeScript, HTML5, CSS3
+
+% ====== Experiência ======
+\section*{Experi\^encia Profissional}
+
+\textbf{Desenvolvedor (Freelancer)} \hfill Remoto \hfill (Nov 2025 -- Atual)
+\begin{itemize}
+    \item Desenvolvimento de automa\c{c}\~oes back-end integrando \textbf{APIs da Meta (Facebook/Instagram Graph API)} para publica\c{c}\~ao simult\^anea de m\'idia, com foco em tratamento de exce\c{c}\~oes e resili\^encia.
+    \item Configura\c{c}\~ao e gerenciamento de infraestrutura em \textbf{Oracle Cloud (VPS)}, provisionando servidores Linux para hospedagem segura de aplica\c{c}\~oes e bancos de dados.
+    \item Implementa\c{c}\~ao completa de sites institucionais, desde o back-end at\'e o deploy em hospedagem est\'atica (GitHub Pages).
+    \item Atua\c{c}\~ao com autonomia total no ciclo de vida do software, garantindo entregas rigorosas de requisitos e prazos.
+\end{itemize}
+
+\textbf{Software Engineer Intern} \hfill Tecnova Energia -- Porto Alegre, RS \hfill (Abr 2024 -- Out 2025)
+\begin{itemize}
+    \item Atua\c{c}\~ao no ciclo completo de desenvolvimento de sistemas corporativos utilizando \textbf{Java} e \textbf{Spring Boot}.
+    \item Aplica\c{c}\~ao pr\'atica de \textbf{DDD} e \textbf{Arquitetura Limpa} na manuten\c{c}\~ao de monolitos e cria\c{c}\~ao de novos servi\c{c}os desacoplados.
+    \item Desenvolvimento e documenta\c{c}\~ao de \textbf{APIs REST} via \textbf{Swagger/OpenAPI}.
+    \item Cria\c{c}\~ao de pipelines de \textbf{CI/CD} e cont\^eineriza\c{c}\~ao de aplica\c{c}\~oes com \textbf{Docker} para padroniza\c{c}\~ao de ambientes.
+    \item Colabora\c{c}\~ao em time \'agil (Scrum/Kanban) com foco em code review e versionamento via Git.
+\end{itemize}
+
+% ====== Projetos ======
+\section*{Projetos}
+
+\textbf{Lucky Draw (AWS Serverless)} \hfill (2025) \\
+Aplicativo mobile para aux\'ilio criativo com backend cloud-native.
+\begin{itemize}
+    \item \textbf{Desenvolvimento Back-end:} Implementa\c{c}\~ao de arquitetura serverless na \textbf{AWS} e documenta\c{c}\~ao de API via \textbf{Swagger}.
+    \item Automatiza\c{c}\~ao de ambiente de desenvolvimento utilizando \textbf{Docker} e esteira de CI/CD via \textbf{GitLab Runner}.
+    \item Implementa\c{c}\~ao de camada de seguran\c{c}a e autentica\c{c}\~ao completa com \textbf{JWT} e \textbf{Spring Security}.
+    \item Codifica\c{c}\~ao de fun\c{c}\~oes em AWS Lambda, integra\c{c}\~ao com S3 e persist\^encia em Aurora PostgreSQL.
+\end{itemize}
+
+\textbf{MeditAmamente (Cliente: Pesquisa Acad\^emica)} \hfill (2024) \\
+Plataforma de apoio \`a pesquisa para m\~aes de beb\^es prematuros.
+\begin{itemize}
+    \item \textbf{Arquitetura e Padroniza\c{c}\~ao:} Defini\c{c}\~ao da estrutura do projeto baseada em \textbf{Design Patterns} e documenta\c{c}\~ao via \textbf{Swagger}.
+    \item Desenvolvimento da API Core com \textbf{Spring Boot}, implementando seguran\c{c}a robusta com \textbf{Spring Security} e \textbf{JWT}.
+    \item Modelagem de banco de dados PostgreSQL e configura\c{c}\~ao de deploy automatizado via GitLab Runner e Docker.
+\end{itemize}
+
+\textbf{Globo Aplausos} \hfill (2023) \\
+Plataforma de reconhecimento interno para colaboradores (Cliente: A Globo).
+\begin{itemize}
+    \item Atua\c{c}\~ao \textbf{Full Stack} (React + NestJS), desenvolvendo interfaces responsivas e servi\c{c}os de backend.
+    \item Escrita e execu\c{c}\~ao de testes automatizados (\textbf{Jest, Cypress}) para garantir a estabilidade das funcionalidades entregues.
+\end{itemize}
+
+% ====== Formação ======
+\section*{Forma\c{c}\~ao Acad\^emica}
+\textbf{Bacharelado em Engenharia de Software} \hfill PUCRS \hfill (Ago 2022 -- Atual)
+\begin{itemize}
+    \item \textbf{Monitoria de POO (Java):} Aux\'ilio a alunos na compreens\~ao de l\'ogica de programa\c{c}\~ao e fundamentos de orienta\c{c}\~ao a objetos.
+    \item \textbf{Instrutor T\'ecnico:} Ministrou workshop pr\'atico de "Containers e Docker" na Semana Acad\^emica da PUCRS (2025).
+\end{itemize}
+
+% ====== Certificações ======
+\section*{Licen\c{c}as e Certifica\c{c}\~oes}
+\begin{itemize}[leftmargin=0.35cm,itemsep=1pt,parsep=0pt,topsep=2pt]
+    \item \textbf{GitHub Foundations (GH-900)} -- GitHub (2026)
+    \item \textbf{T\'ecnicas Avan\c{c}adas de Java} -- LinkedIn Learning (2025)
+    \item \textbf{Fundamentos de DevOps: DevSecOps} -- LinkedIn Learning (2025)
+    \item \textbf{Fundamentos de Docker e Kubernetes} -- LinkedIn Learning (2025)
+    \item \textbf{Fundamentos de SQL Server para Desenvolvedores} -- LinkedIn Learning (2025)
+    \item \textbf{Ingl\^es:} N\'ivel Intermedi\'ario-Avan\c{c}ado (Curso Wizard 2015--2018)
+\end{itemize}
+
+\end{document}
