@@ -1,0 +1,208 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Pacotes e configuração visual
+\usepackage[
+    ignoreheadfoot,
+    top=1.1 cm,
+    bottom=1.1 cm,
+    left=1.3 cm,
+    right=1.3 cm,
+    footskip=0.6 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Vitor Jacom - Resume},
+    pdfauthor={V\'itor Jacom},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\begin{document}
+
+% ====== Header ======
+\begin{header}
+    {\fontsize{25 pt}{25 pt}\selectfont V\'itor Jacom}
+
+    \vspace{5 pt}
+
+    \normalsize
+    Porto Alegre -- RS -- Brazil \quad \href{mailto:vjds.vitor@gmail.com}{vjds.vitor@gmail.com} \quad \href{tel:+55 51 99578 3576}{+55 (51) 99578-3576} \\
+    \href{https://www.linkedin.com/in/vitorjacom/}{linkedin.com/in/vitorjacom} \quad \href{https://github.com/VitorJacom}{github.com/VitorJacom}
+\end{header}
+
+% ====== Professional Summary ======
+\section*{Professional Summary}
+\textbf{Full-Stack Software Engineer} with practical experience across the \textbf{Java (Spring Boot)} and \textbf{TypeScript (React, React Native, NestJS)} ecosystems. Experienced from \textbf{RESTful API} design and implementation to cloud deployment (\textbf{AWS and GCP}). Proficient in \textbf{Docker}, \textbf{CI/CD pipelines}, automated testing, and software architecture (\textbf{DDD}, Clean Code), focused on high performance, quality, and business value delivery.
+
+% ====== Technical Skills ======
+\section*{Technical Skills}
+\noindent\textbf{Languages:} Java (11/17+), TypeScript, JavaScript, Kotlin, Python, SQL \\
+\textbf{Front-end \& Mobile:} React.js, React Native, Next.js, HTML5, CSS3, Tailwind CSS \\
+\textbf{Back-end \& Frameworks:} Spring Boot, Spring Security, NestJS, Node.js, Express, RESTful APIs \\
+\textbf{Cloud \& DevOps:} AWS (Lambda, Aurora, S3, ECR), Google Cloud (Cloud Run), Docker, GitHub Actions, GitLab CI/CD \\
+\textbf{Databases \& ORM:} PostgreSQL, MySQL, Redis, Prisma ORM, Spring Data JPA \\
+\textbf{Testing \& Quality Assurance:} JUnit, Mockito, Jest, Cypress, Maestro, Postman
+
+% ====== Professional Experience ======
+\section*{Professional Experience}
+
+\textbf{Software Developer (Freelance)} \hfill Remote \hfill (Nov 2025 -- Present)
+
+\begin{itemize}
+    \item \textbf{Full-Stack Development, TS/React \& CMS:} Designed and developed institutional web portals from scratch using TypeScript and React, including an internal CMS dashboard for autonomous content management (team members, articles, and news), email-integrated contact forms, and anti-fraud warning modals.
+
+    \item \textbf{Mobile-First Design \& Responsiveness:} Designed highly responsive interfaces focused on performance and mobile-first navigation, ensuring seamless usability for mobile users (predominant end-user profile) and fast loading times.
+
+    \item \textbf{API Integrations \& Social Media:} Integrated the Meta Graph API for automated synchronization and display of the latest Instagram posts directly on the website, keeping the portal dynamic without manual intervention.
+
+    \item \textbf{Domain Migration, Infrastructure \& SEO:} Executed migrations from legacy platforms (Wix) to custom modern solutions, managing domain transfers (Registro.br), DNS zones, and SEO indexing via Google Search Console to boost organic visibility.
+
+    \item \textbf{Requirements Engineering \& Project Management:} Autonomously managed the entire Software Development Life Cycle (SDLC), from mockup ideation and requirement gathering with clients to weekly milestone planning and direct stakeholder alignment.
+\end{itemize}
+
+\textbf{Software Engineer Intern} \hfill Tecnova Energia -- Porto Alegre, Brazil \hfill (Apr 2024 -- Oct 2025)
+
+\begin{itemize}
+    \item \textbf{Data Engineering \& Serverless Cloud:} Eliminated manual planning data migration (+25k records) into Power BI by building a containerized serverless application with Docker deployed on GCP (Google Cloud Run) under DDD architecture, ensuring data integrity and zero idle infrastructure cost.
+
+    \item \textbf{ERP \& CTM Automation:} Developed Java 17 (Spring Boot) microservices for continuous integration between the Corporate Travel Management (CTM) system and the enterprise ERP, automating expense approvals and real-time budget synchronization.
+
+    \item \textbf{ETL Pipelines \& Data Engineering:} Designed and implemented ingestion pipelines to extract, normalize, and structure engineering data from platforms such as greendocs. Standardized unstructured data into relational databases, feeding executive BI dashboards.
+
+    \item \textbf{Technical Research \& DevOps:} Structured CI/CD workflows via GitHub Actions and standardized local environments using Docker, working autonomously to leverage official documentation and build RESTful integrations in Java and Python.
+\end{itemize}
+
+% ====== Projects & Consulting ======
+\section*{Software Engineering Portfolio (Software House -- AGES/PUCRS)}
+\textit{\small Academic-professional projects developed for real-world clients using agile methodologies and cross-functional squads.}
+\vspace{0.3em}
+
+\textbf{Estudify (Client: Startup)} \hfill (2026) \\
+Gamified educational mobile application designed for national exam and university admission prep.
+\begin{itemize}
+    \item \textbf{Squad Leadership \& Technical Governance (AGES IV):} Led technical governance for an 18-member engineering team distributed across 4 concurrent squads, structuring User Story refinements, ClickUp backlog prioritization, and bi-weekly sprint deliveries directly aligned with the startup client.
+
+    \item \textbf{Quality Engineering on Physical Devices (V\&V):} Designed an E2E mobile test automation strategy integrating Maestro and ADB (Android Debug Bridge) executed on real physical Android devices, and built an auxiliary Node.js test server for idempotent PostgreSQL database resets, eliminating test environment inconsistencies.
+
+    \item \textbf{Performance Optimization \& Build Stability:} Optimized graphic asset management and project compilation pipelines, reducing memory consumption in Android Studio by 98\%, resolving compiler out-of-memory errors and ensuring stable production APK builds.
+
+    \item \textbf{Technical Stack:} \textbf{React Native}, \textbf{TypeScript}, \textbf{NestJS}, \textbf{Prisma ORM}, \textbf{PostgreSQL}, \textbf{Docker}, \textbf{Maestro}, \textbf{ADB}.
+\end{itemize}
+
+\textbf{Lucky Draw (Client: Startup)} \hfill (2025) \\
+Mobile application for unlocking creative inspiration and generating daily drawing challenges.
+\begin{itemize}
+    \item \textbf{Cloud-Native Serverless Architecture:} Architected and implemented a serverless AWS backend using AWS Lambda (Spring Boot backend), AWS Aurora PostgreSQL for relational persistence, and AWS S3 for media storage, achieving zero idle compute costs.
+
+    \item \textbf{DevOps \& Automated CI/CD Pipeline:} Configured a comprehensive GitLab CI pipeline covering build stages, automated testing (JUnit/Mockito), static code analysis with Checkstyle, and Docker container packaging published to AWS ECR.
+
+    \item \textbf{Code Governance \& Code Review:} Served as the primary technical reviewer for team Merge Requests (MRs), enforcing Controller-Service-Repository patterns, RESTful standards, test coverage, and GitFlow workflow.
+
+    \item \textbf{Security, Exception Handling \& APIs:} Developed secure RESTful endpoints protected by Spring Security + JWT, configured global exception handling (GlobalExceptionHandler), and standardized responses with Bean Validation (@Valid) and Swagger.
+
+    \item \textbf{Technical Stack:} \textbf{Java 17}, \textbf{Spring Boot}, \textbf{PostgreSQL}, \textbf{AWS (Lambda, Aurora, S3, ECR)}, \textbf{Docker}, \textbf{GitLab CI/CD}, \textbf{JUnit}, \textbf{Mockito}, \textbf{Checkstyle}.
+\end{itemize}
+
+\textbf{MeditAmamente (Client: Academic Research / PhD Candidate)} \hfill (2024) \\
+Digital platform for mental health support and guided meditation protocols for mothers of premature infants.
+\begin{itemize}
+    \item \textbf{Clean Architecture \& DDD (Technical Leadership):} Stepped up to lead backend architecture design in Spring Boot, implementing a 4-layer Domain-Driven Design (DDD) structure (Domain, Application, Infrastructure, and Presentation) to guarantee high decoupling and maintainability.
+
+    \item \textbf{Security, Authentication \& Persistence:} Implemented authentication and authorization with Spring Security and stateless JWT tokens, along with relational entity mappings and database configuration in PostgreSQL.
+
+    \item \textbf{Quality Assurance \& Refactoring:} Led refactoring initiatives to eliminate technical debt and standardize backend error handling, directly contributing to the team's architectural alignment.
+
+    \item \textbf{Recognition \& Academic Award:} Awarded top marks and honored as the Outstanding Academic Project PUCRS, recognized for architectural rigor, technical delivery, and impact on academic research.
+
+    \item \textbf{Technical Stack:} \textbf{Java}, \textbf{Spring Boot}, \textbf{PostgreSQL}, \textbf{Domain-Driven Design (DDD)}, \textbf{Clean Architecture}, \textbf{Spring Security}, \textbf{JWT}, \textbf{Docker}, \textbf{Git}.
+\end{itemize}
+
+\textbf{Globo Aplausos (Client: Globo\texttrademark)} \hfill (2023) \\
+Internal corporate gamification and recognition platform developed in partnership with Globo.
+\begin{itemize}
+    \item \textbf{Full-Stack Development (AGES I):} Developed responsive interface components with Next.js, React, TypeScript, and Material UI (MUI), integrating with RESTful endpoints in NestJS and entity modeling with Prisma ORM and MySQL.
+
+    \item \textbf{Database Automation:} Designed the core gamification engine using MySQL Event Triggers to automate periodic distribution of virtual coins to employees, validating and isolating the database environment with Docker.
+
+    \item \textbf{Code Quality \& Unit Testing:} Authored unit test suites for backend services and controllers with Jest, ensuring business rule integrity, along with Cypress End-to-End (E2E) testing for critical user journeys.
+
+    \item \textbf{Agile Standards \& Collaboration:} Collaborated within an agile squad adhering to scrum practices.
+
+    \item \textbf{Technical Stack:} \textbf{Next.js}, \textbf{React}, \textbf{TypeScript}, \textbf{NestJS}, \textbf{Prisma ORM}, \textbf{MySQL}, \textbf{Material UI (MUI)}, \textbf{Jest}, \textbf{Cypress}, \textbf{Husky}, \textbf{Docker}, \textbf{Git}.
+\end{itemize}
+
+% ====== Education ======
+\section*{Education}
+\textbf{Bachelor of Science in Software Engineering} -- PUCRS \hfill (Graduated Aug/2026)
+\begin{highlights}
+    \item \textbf{Outstanding Academic Project (2024):} Top distinction awarded for the development of the MeditAmamente platform.
+    \item \textbf{OOP Teaching Assistant in Java (2023):} Tutored students in programming logic and Object-Oriented Programming.
+    \item \textbf{Technical Instructor (2025):} Delivered the "Containers and Docker" workshop at PUCRS Academic Week.
+\end{highlights}
+
+% ====== Certifications and Languages ======
+\section*{Certifications \& Languages}
+
+\begin{itemize}[leftmargin=0.35cm,itemsep=1pt,parsep=0pt,topsep=2pt]
+    \item \textbf{GitHub Foundations (GH-900)} -- GitHub (2026)
+    \item \textbf{Languages:} English (Advanced / Fluent), Portuguese (Native)
+\end{itemize}
+
+\end{document}
