@@ -3,11 +3,11 @@
 % Pacotes e configuração visual
 \usepackage[
     ignoreheadfoot,
-    top=1.1 cm,
-    bottom=1.1 cm,
-    left=1.3 cm,
-    right=1.3 cm,
-    footskip=0.6 cm,
+    top=0.50 cm,
+    bottom=0.50 cm,
+    left=0.90 cm,
+    right=0.90 cm,
+    footskip=0.25 cm,
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -52,14 +52,14 @@
 \setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
-\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\titleformat{\section}{\needspace{2\baselineskip}\bfseries\normalsize}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.11 cm}{0.06 cm}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newenvironment{highlights}{
     \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
+        topsep=0.02 cm,
+        parsep=0.01 cm,
         partopsep=0pt,
         itemsep=0pt,
         leftmargin=0 cm + 10pt
@@ -69,128 +69,73 @@
 }
 
 \newenvironment{header}{
-    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.1}
 }{
     \par\kern\topsep
 }
 
 \begin{document}
+\fontsize{8.7pt}{10.4pt}\selectfont
 
 % ====== Cabeçalho ======
 \begin{header}
-    {\fontsize{25 pt}{25 pt}\selectfont V\'itor Jacom}
-
-    \vspace{5 pt}
-
-    \normalsize
-    Porto Alegre -- RS -- Brasil \quad \href{mailto:vjds.vitor@gmail.com}{vjds.vitor@gmail.com} \quad \href{tel:+5551995783576}{(51) 99578-3576} \\
+    {\fontsize{19 pt}{19 pt}\selectfont \textbf{V\'itor Jacom}} \\
+    \vspace{1 pt}
+    {\small \textbf{Engenheiro de Software Full-Stack | Java, TypeScript, React \& Cloud Architecture}} \\
+    \vspace{1 pt}
+    \footnotesize
+    Porto Alegre -- RS -- Brasil \quad \href{mailto:vjds.vitor@gmail.com}{vjds.vitor@gmail.com} \quad \href{tel:+5551995783576}{(51) 99578-3576} \quad
     \href{https://www.linkedin.com/in/vitorjacom/}{linkedin.com/in/vitorjacom} \quad \href{https://github.com/VitorJacom}{github.com/VitorJacom}
 \end{header}
 
 % ====== Resumo Profissional ======
 \section*{Resumo Profissional}
-\textbf{Engenheiro de Software Full-Stack} especializado nos ecossistemas \textbf{Java (Spring Boot)}, \textbf{Python} e \textbf{TypeScript (React, NestJS)}, com forte atua\c{c}\~ao no desenho de microsservi\c{c}os escal\'aveis, princ\'ipios \textbf{12-Factor App}, \textbf{Programa\c{c}\~ao Defensiva} e nuvem (\textbf{AWS e GCP}). Pioneiro no dom\'inio de fluxos de engenharia acelerados por \textbf{ferramentas e agentes de IA} (Claude Code, Codex, Cursor), destacando-se pela governan\c{c}a arquitetural de subagentes, auditoria rigorosa de c\'odigo gerado via \textbf{TDD} e rastreamento distribu\'ido com \textbf{Jaeger} e \textbf{OpenTelemetry}.
+\textbf{Engenheiro de Software Full-Stack} especializado nos ecossistemas \textbf{Java (17/21, Spring Boot 3)}, \textbf{TypeScript (React 19, Next.js, NestJS)} e \textbf{Python}, com s\'olida experi\^encia na arquitetura de sistemas \textbf{SaaS Multi-Tenant}, microsservi\c{c}os cloud-native (\textbf{GCP e AWS}) e \textbf{Infraestrutura como C\'odigo (Terraform)}. Forte atua\c{c}\~ao em \textbf{Programa\c{c}\~ao Defensiva}, \textbf{Contract-First (OpenAPI 3.0)}, \textbf{TDD Estrito} e observabilidade distribu\'ida com \textbf{OpenTelemetry e Jaeger}. Desenvolvedor de ferramentas de \textbf{Engenharia de Plataforma e Orquestra\c{c}\~ao Determin\'istica de IA} (CLI/TUI, guardrails de an\'alise est\'atica, isolamento em Git Worktrees e telemetria FinOps).
 
 % ====== Tecnologias ======
 \section*{Compet\^encias T\'ecnicas}
-\noindent\textbf{Linguagens:} Java (11/17/21), TypeScript, JavaScript, Python, Kotlin, SQL \\
-\textbf{Back-end \& Arquitetura:} Spring Boot, Spring Security, NestJS, APIs RESTful, DDD, SOLID, Clean Code, TDD, 12-Factor App \\
-\textbf{Front-end \& Mobile:} React.js, Next.js, React Native, Vite, Tailwind CSS, Gest\~ao de Estado, Design Systems, HTML5, CSS3 \\
-\textbf{IA \& Orquestra\c{c}\~ao Ag\^entica:} Claude Code, Codex, Cursor, GitHub Copilot, Orquestra\c{c}\~ao de Subagentes, Valida\c{c}\~ao/Auditoria de C\'odigo IA \\
-\textbf{Qualidade \& Observabilidade:} Jaeger, OpenTelemetry, MDC, Distributed Tracing, JUnit 5, Mockito, Testcontainers, Vitest, Cypress, Maestro \\
-\textbf{Cloud, DevOps \& Seguran\c{c}a:} AWS (Lambda, Aurora, S3, ECR), GCP (Cloud Run), Docker (Multi-stage), CI/CD (GitHub Actions, GitLab CI), Linux \\
-\textbf{Bancos de Dados \& ORM:} PostgreSQL, MySQL, Redis, Prisma ORM, Spring Data JPA, Flyway, Modelagem Relacional
+\noindent\textbf{Linguagens:} Java (11/17/21), TypeScript 5 (Strict Mode), JavaScript, Python, SQL, Kotlin \\
+\textbf{Back-end \& Arquitetura:} Spring Boot 3.3, Spring Security, NestJS, Node.js, SaaS Multi-Tenant, DDD, Clean Architecture, Vertical Slice (VSA), Contract-First (OpenAPI 3.0), RFC 7807, HMAC SHA-256, Idempot\^encia, 12-Factor App \\
+\textbf{Front-end \& Mobile:} React 19, Next.js, React Native, Vite, Tailwind CSS, TanStack Query v5, Zustand, Zod, Storybook 8 (SDD), Biome \\
+\textbf{Cloud, IaC \& DevOps:} GCP (Cloud Run, Cloud SQL, Cloud Storage, Cloud Trace), AWS (Lambda, Aurora, S3, ECR), Terraform (IaC), Cloudflare Pages, Docker (Multi-stage), CI/CD (GitHub Actions, GitLab CI), Linux \\
+\textbf{Qualidade \& Observabilidade:} OpenTelemetry, Jaeger, MDC (Virtual Threads), TDD, JUnit 5, Mockito, Testcontainers, Vitest, React Testing Library, MSW, Cypress, Maestro (Mobile E2E) \\
+\textbf{Engenharia Ag\^entica \& Governan\c{c}a:} Orquestra\c{c}\~ao Determin\'istica de Agentes (CLI/TUI com React Ink), Git Worktree Sandboxing, Contract Drift Detection (SHA-256), Test Tamper Guard, An\'alise Est\'atica Anti-Slop, LLM FinOps \\
+\textbf{Bancos de Dados \& ORM:} PostgreSQL 16, MySQL, SQLite (WAL), Redis, Spring Data JPA/Hibernate, Prisma ORM, Flyway
+
 % ====== Experiência ======
 \section*{Experi\^encia Profissional}
 
-\textbf{Desenvolvedor (Freelancer)} \hfill Remoto (Porto Alegre, RS) \hfill (Nov 2025 -- Atual)
-
-\begin{itemize}[itemsep=1pt, topsep=2pt, parsep=0pt, leftmargin=12pt]
-    \item \textbf{Framework de Orquestra\c{c}\~ao Ag\^entica \& Governan\c{c}a de IA:} Projetou ecossistema de subagentes especializados (\texttt{qa-runner}, \texttt{backend-developer}, \texttt{code-explorer}) com governan\c{c}a estrita de contexto (\textit{Zero Token Waste}) e alinhamento pr\'evio (\texttt{/grill-me}). Isolou o orquestrador na escrita de testes em \texttt{src/test/} (RED), delegando c\'odigo de produ\c{c}\~ao exclusivamente a subagentes executores (GREEN/REFACTOR).
-
-    \item \textbf{Auditoria Visual de C\'odigo IA via Jaeger/OTel:} Instrumentou rastreamento distribu\'ido com OpenTelemetry e Jaeger, propagando \texttt{traceId} e \texttt{spanId} via MDC nas \textbf{Virtual Threads do Java 21} (\texttt{TaskDecorator}). Utilizou grafos de execu\c{c}\~ao e spans para auditar a ordem de invoca\c{c}\~ao de m\'etodos, lat\^encias de APIs e valida\c{c}\~ao de rotas de conting\^encia/fallback.
-
-    \item \textbf{Programa\c{c}\~ao Defensiva \& 12-Factor App:} Implementou arquitetura desacoplada e stateless com segredos em runtime. Desenvolveu prote\c{c}\~ao de borda em filtros HTTP contra SQLi, XSS e Path Traversal (\texttt{SecurityAuditFilter}), respostas anti-enumera\c{c}\~ao, debounce anti-spam e valida\c{c}\~ao criptogr\'afica HMAC SHA-256 em webhooks.
-
-    \item \textbf{Back-end Resiliente \& Automa\c{c}\~oes em Python:} Concep\c{c}\~ao de microsservi\c{c}os orientados a eventos com Java 21/Spring Boot e desenvolvimento de scripts/servi\c{c}os auxiliares em Python. Modelagem de \textit{Strategy Pattern} para orquestra\c{c}\~ao multimodal de IA, integra\c{c}\~ao resiliente com APIs externas e tratamento de erros RFC 7807 (\texttt{ProblemDetail}).
-
-    \item \textbf{Dual SDD + TDD no Front-end (React/TypeScript):} Constru\c{c}\~ao de SPAs responsivas com React, Vite e TypeScript governadas por contratos de API (Presets Discovery). Implementou esteira SDD via Storybook com testes unit\'arios (Vitest, cobertura $\ge$ 80\%) e ferramenta CLI pr\'opria em Python (\texttt{skill\_assistant}) para auditoria est\'atica e conformidade de UX.
+\textbf{Engenheiro de Software Full-Stack (Aut\^onomo / Produtos SaaS \& Consultoria)} \hfill Remoto (Porto Alegre, RS) \hfill (Nov 2025 -- Atual)
+\begin{itemize}[itemsep=0.5pt, topsep=1pt, parsep=0pt, leftmargin=10pt]
+    \item \textbf{Arquitetura SaaS Multi-Tenant \& Pagamentos PIX (ZnapZap / Chora Rival):} Arquitetou back-end multi-tenant em \textbf{Java 21 (Virtual Threads)} e \textbf{Spring Boot 3.3} com \textbf{PostgreSQL 16 (Flyway)} para produtos de gera\c{c}\~ao multimodal com IA via \textit{Strategy Pattern}. Implementou checkout PIX em tempo real (Mercado Pago) com valida\c{c}\~ao criptogr\'afica \textbf{HMAC SHA-256} e idempot\^encia, autentica\c{c}\~ao \textit{passwordless} (\textbf{Magic Link}) com isolamento de tenant, streaming seguro (\textbf{Google Cloud Storage}) e padroniza\c{c}\~ao de erros \textbf{RFC 7807 (\texttt{ProblemDetail})}.
+    \item \textbf{Infraestrutura como C\'odigo (IaC), Cloud Serverless \& Observabilidade:} Provisionou infraestrutura \textit{scale-to-zero} (FinOps) via \textbf{Terraform} na \textbf{GCP (Cloud Run, Cloud SQL, Cloud Storage, Cloud Trace)} e \textbf{Cloudflare Pages}, com containers \textbf{Docker multi-stage} n\~ao-root. Instrumentou rastreamento distribu\'ido com \textbf{OpenTelemetry e Jaeger}, propagando \texttt{traceId}/\texttt{spanId} via MDC em Virtual Threads (\texttt{TaskDecorator}) para auditoria de lat\^encia e rotas de fallback.
+    \item \textbf{Front-end Moderno \& Component-Driven Development (Chora Rival):} Desenvolveu aplica\c{c}\~oes web responsivas (\textit{mobile-first}) e portais institucionais em \textbf{React 19}, \textbf{TypeScript 5 (Strict Mode)}, \textbf{Vite}, \textbf{Tailwind CSS}, \textbf{TanStack Query v5}, \textbf{Zustand}, \textbf{Zod} e \textbf{Biome}, estruturadas sob \textbf{Storybook 8 (SDD)} e su\'ite de testes automatizados com \textbf{Vitest, React Testing Library e MSW} ($\ge$ 80\% de cobertura V8).
+    \item \textbf{Harness Engineering \& Orquestra\c{c}\~ao Determin\'istica de Agentes:} Construiu ferramenta CLI/TUI reativa em \textbf{TypeScript/Node.js (React Ink, Zod, SQLite WAL)} sob \textbf{Vertical Slice Architecture} para orquestra\c{c}\~ao determin\'istica de agentes de IA multi-provider (Claude Code, Codex, Antigravity), guiada por contratos \textbf{Contract-First (OpenAPI 3.0 $\to$ TypeScript)} com detec\c{c}\~ao automatizada de \textit{drift} via checksum \textbf{SHA-256}.
+    \item \textbf{Guardrails Anti-Regress\~ao, Sandboxing \& Telemetria FinOps:} Implementou isolamento de execu\c{c}\~ao ef\^emera (\textit{Zero-State Memory}) via \textbf{Git Worktrees}, \textbf{Test Tamper Guard} (auditoria automatizada de \texttt{git diff} contra adultera\c{c}\~ao de su\'ites de testes), \textbf{Inspetor Est\'atico Anti-Slop} (preven\c{c}\~ao de \texttt{any}, \textit{barrel bridges} e complexidade excessiva) e motor de \textbf{Telemetria/FinOps} para controle de tokens e custos em USD.
 \end{itemize}
 
-\textbf{Software Engineer Intern} \hfill Tecnova Energia -- Porto Alegre, RS \hfill (Abr 2024 -- Out 2025)
-
-\begin{itemize}[itemsep=1pt, topsep=2pt, parsep=0pt, leftmargin=12pt]
-    \item \textbf{Engenharia de Dados \& Cloud Serverless:} Construiu aplica\c{c}\~ao serverless conteinerizada com Docker no GCP (Cloud Run) sob princ\'ipios DDD, eliminando a migra\c{c}\~ao manual de +25k linhas para BI com custo zero em per\'iodos de ociosidade.
-    \item \textbf{Automa\c{c}\~ao ERP \& CTM:} Desenvolveu microsservi\c{c}os em Java 17 (Spring Boot) e scripts em Python para integra\c{c}\~ao cont\'inua entre gest\~ao de viagens corporativas e ERP empresarial, automatizando aprova\c{c}\~oes de despesas em tempo real.
-    \item \textbf{DevOps \& Pipelines CI/CD:} Estruturou automa\c{c}\~oes com GitHub Actions e Docker, elaborando documenta\c{c}\~ao de APIs RESTful com Swagger/OpenAPI e atuando em rituais \'ageis e code reviews rigorosos.
+\vspace{1.5pt}
+\textbf{Estagi\'ario de Engenharia de Software (Back-end \& Cloud)} \hfill Tecnova Energia -- Porto Alegre, RS \hfill (Abr 2024 -- Out 2025)
+\begin{itemize}[itemsep=0.5pt, topsep=1pt, parsep=0pt, leftmargin=10pt]
+    \item \textbf{Engenharia de Dados \& Cloud Serverless (FinOps):} Eliminou a migra\c{c}\~ao manual de \textbf{+25 mil registros} para o Power BI ao arquitetar aplica\c{c}\~ao serverless conteinerizada com \textbf{Docker} no \textbf{GCP (Cloud Run)} sob \textbf{DDD}, atingindo custo zero de infraestrutura em per\'iodos de ociosidade (\textit{scale-to-zero}).
+    \item \textbf{Integra\c{c}\~ao Cont\'inua ERP, CTM \& Pipelines ETL:} Desenvolveu microsservi\c{c}os em \textbf{Java 17 (Spring Boot)} e pipelines \textbf{ETL em Python} para sincroniza\c{c}\~ao or\c{c}ament\'aria e aprova\c{c}\~ao de despesas em tempo real entre o sistema de viagens corporativas (CTM) e o ERP empresarial, al\'em de automa\c{c}\~oes \textbf{CI/CD (GitHub Actions)} e documenta\c{c}\~ao \textbf{Swagger/OpenAPI}.
 \end{itemize}
 
-% ====== Projetos e Consultoria ======
-\section*{Portf\'olio de Engenharia de Software (F\'abrica de Software -- AGES/PUCRS)}
-\textit{\small Projetos desenvolvidos para clientes reais em squads multidisciplinares utilizando metodologias \'ageis.}
-\vspace{0.3em}
-
-\textbf{Estudify (Cliente: Startup)} \hfill (2026) \\
-Aplicativo educacional gamificado focado em estudos para o ENEM e vestibulares.
-\begin{itemize}
-    \item \textbf{Governan\c{c}a \& Gest\~ao de Squads:} Liderou a coordena\c{c}\~ao t\'ecnica de 18 desenvolvedores distribu\'idos em 4 squads simult\^aneas, conduzindo refinamento de User Stories, prioriza\c{c}\~ao de backlog no ClickUp e alinhamento com a diretoria da startup.
-
-    \item \textbf{Qualidade de Software \& Testes E2E:} Estruturou a su\'ite de automa\c{c}\~ao de testes E2E mobile integrando Maestro e ADB em dispositivos reais. Desenvolveu servidor Node.js auxiliar para limpeza idempotente do banco PostgreSQL.
-
-    \item \textbf{Otimiza\c{c}\~ao de Performance \& Builds:} Otimizou o gerenciamento de ativos de m\'idia (redu\c{c}\~ao de 98\% no peso de arquivos), sanando problemas de mem\'oria no compilador do Android Studio e viabilizando builds est\'aveis de produ\c{c}\~ao.
-
-    \item \textbf{Stack T\'ecnica:} \textbf{React Native}, \textbf{TypeScript}, \textbf{NestJS}, \textbf{Prisma ORM}, \textbf{PostgreSQL}, \textbf{Docker}, \textbf{Maestro}.
+\vspace{1.5pt}
+\textbf{Engenheiro de Software \& Tech Lead} \hfill AGES (F\'abrica de Software -- PUCRS) -- Porto Alegre, RS \hfill (Mar 2023 -- Jul 2026)
+\begin{itemize}[itemsep=0.5pt, topsep=1pt, parsep=0pt, leftmargin=10pt]
+    \item \textbf{Lideran\c{c}a T\'ecnica \& Performance Mobile (Estudify -- Startup, 2026):} Liderou tecnicamente \textbf{18 desenvolvedores em 4 squads \'ageis} em app mobile (\textbf{React Native, TypeScript, NestJS, Prisma ORM, PostgreSQL}). Reduziu em \textbf{98\% o consumo de mem\'oria} de ativos gr\'aficos (sanando erros de \textit{Out-of-Memory} no build Android) e estruturou automa\c{c}\~ao E2E em dispositivos f\'isicos com \textbf{Maestro, ADB} e reset idempotente de banco em Node.js.
+    \item \textbf{Arquitetura Serverless AWS \& CI/CD (Lucky Draw -- Startup, 2025):} Projetou back-end cloud-native em \textbf{Java 17 (Spring Boot)} sobre \textbf{AWS Lambda, Aurora PostgreSQL e S3}, com autentica\c{c}\~ao stateless (\textbf{Spring Security + JWT}), an\'alise est\'atica (\textbf{Checkstyle}), testes (\textbf{JUnit 5/Mockito}) e deploy automatizado de containers Docker no \textbf{AWS ECR} via \textbf{GitLab CI/CD}.
+    \item \textbf{Clean Architecture, DDD \& Premia\c{c}\~ao (MeditAmamente, 2024):} Liderou a arquitetura do back-end em \textbf{Java e Spring Boot} estruturada em 4 camadas do \textbf{Domain-Driven Design (DDD)} com \textbf{Spring Data JPA/Hibernate e PostgreSQL}, conquistando a honraria m\'axima de \textbf{Projeto Destaque Acad\^emico PUCRS}.
+    \item \textbf{Engenharia Full-Stack Corporativa (Globo Aplausos -- Cliente: Globo\texttrademark, 2023):} Desenvolveu plataforma corporativa de gamifica\c{c}\~ao em parceria com a \textbf{Globo} utilizando \textbf{React, Next.js, TypeScript, NestJS, Prisma ORM e MySQL (Event Triggers)}, garantindo estabilidade de fluxos cr\'iticos com su\'ites \textbf{Jest e Cypress (E2E)}.
 \end{itemize}
 
-\textbf{Lucky Draw (Cliente: Startup)} \hfill (2025) \\
-Aplicativo mobile para desbloqueio criativo com infraestrutura cloud-native serverless na AWS.
-\begin{itemize}
-    \item \textbf{Arquitetura Cloud-Native Serverless (AWS):} Projetou arquitetura orientada a microsservi\c{c}os serverless utilizando AWS Lambda (Spring Boot), banco relacional AWS Aurora PostgreSQL e buckets AWS S3 para m\'idias.
-
-    \item \textbf{DevOps \& Pipeline CI/CD:} Configurou pipeline automatizada com GitLab CI cobrindo est\'agios de build, testes automatizados (JUnit/Mockito), an\'alise est\'atica (Checkstyle) e cont\^eineres Docker publicados no AWS ECR.
-
-    \item \textbf{Seguran\c{c}a \& APIs RESTful:} Implementou prote\c{c}\~ao de rotas com Spring Security e JWT, tratamento global de exce\c{c}\~oes (\texttt{@ControllerAdvice}) e valida\c{c}\~ao defensiva de dados com Bean Validation e Swagger.
-
-    \item \textbf{Stack T\'ecnica:} \textbf{Java 17}, \textbf{Spring Boot}, \textbf{AWS (Lambda, Aurora, S3, ECR)}, \textbf{Docker}, \textbf{GitLab CI/CD}, \textbf{JUnit}, \textbf{Mockito}.
-\end{itemize}
-
-\textbf{MeditAmamente (Cliente: Pesquisa Acad\^emica)} \hfill (2024) \\
-Plataforma digital para protocolo de medita\c{c}\~ao guiada para m\~aes de beb\^es prematuros.
-\begin{itemize}
-    \item \textbf{Arquitetura Limpa \& DDD:} Liderou o desenho arquitetural do back-end em Spring Boot estruturado nas camadas do Domain-Driven Design (Domain, Application, Infrastructure e Presentation).
-
-    \item \textbf{Seguran\c{c}a \& Persist\^encia:} Implementou m\'odulo stateless com Spring Security e JWT, mapeamento relacional com Spring Data JPA/Hibernate e banco PostgreSQL.
-
-    \item \textbf{Premia\c{c}\~ao:} Projeto laureado com a honraria m\'axima de Projeto Destaque Acad\^emico PUCRS pelo rigor arquitetural e impacto social.
-
-    \item \textbf{Stack T\'ecnica:} \textbf{Java}, \textbf{Spring Boot}, \textbf{PostgreSQL}, \textbf{DDD}, \textbf{Clean Architecture}, \textbf{Spring Security}, \textbf{JWT}, \textbf{Docker}.
-\end{itemize}
-
-\textbf{Globo Aplausos (Cliente: Globo\texttrademark)} \hfill (2023) \\
-Plataforma corporativa de gamifica\c{c}\~ao desenvolvida em parceria com a Globo.
-\begin{itemize}
-    \item \textbf{Desenvolvimento Full-Stack:} Cria\c{c}\~ao de componentes de interface responsivos com React, Next.js e TypeScript integrados a endpoints RESTful em NestJS e Prisma ORM com MySQL.
-
-    \item \textbf{Testes Automatizados \& Qualidade:} Constru\c{c}\~ao de testes unit\'arios e de integra\c{c}\~ao com Jest para regras de neg\'ocio, al\'em de testes End-to-End (E2E) com Cypress cobrindo jornadas cr\'iticas.
-
-    \item \textbf{Stack T\'ecnica:} \textbf{React}, \textbf{Next.js}, \textbf{TypeScript}, \textbf{NestJS}, \textbf{Prisma ORM}, \textbf{MySQL}, \textbf{Jest}, \textbf{Cypress}, \textbf{Docker}.
-\end{itemize}
-
-% ====== Formação ======
-\section*{Forma\c{c}\~ao Acad\^emica}
-\textbf{Bacharel em Engenharia de Software} -- PUCRS \hfill (Conclus\~ao em Ago/2026)
-\begin{highlights}
-    \item \textbf{Projeto Destaque Acad\^emico (2024):} Premia\c{c}\~ao m\'axima pelo desenvolvimento do projeto MeditAmamente.
-    \item \textbf{Monitoria de POO em Java (2023):} Orientada a fundamentos de orienta\c{c}\~ao a objetos, heran\c{c}a, polimorfismo e padr\~oes de projeto.
-    \item \textbf{Instrutor T\'ecnico (2025):} Ministrou o workshop pr\'atico "Containers e Docker" na Semana Acad\^emica da PUCRS.
-\end{highlights}
-
-% ====== Certificações e Idiomas ======
-\section*{Certifica\c{c}\~oes e Idiomas}
-
-\begin{itemize}[leftmargin=0.35cm,itemsep=1pt,parsep=0pt,topsep=2pt]
-    \item \textbf{GitHub Foundations (GH-900)} -- GitHub (2026)
-    \item \textbf{Ingl\^es:} N\'ivel Avan\c{c}ado
+% ====== Formação e Certificações ======
+\section*{Forma\c{c}\~ao Acad\^emica, Certifica\c{c}\~oes \& Idiomas}
+\textbf{Bacharel em Engenharia de Software} -- PUCRS \hfill (Conclu\'ido em Ago/2026)
+\begin{itemize}[itemsep=0.5pt, topsep=1pt, parsep=0pt, leftmargin=10pt]
+    \item \textbf{Destaques Acad\^emicos:} Premia\c{c}\~ao m\'axima de \textbf{Projeto Destaque Acad\^emico PUCRS (2024)}; \textbf{Instrutor T\'ecnico (2025)} do workshop pr\'atico ``Containers e Docker'' na Semana Acad\^emica da PUCRS; \textbf{Monitor de POO em Java (2023)}.
+    \item \textbf{Certifica\c{c}\~oes \& Idiomas:} \textbf{GitHub Foundations (GH-900)} -- GitHub (2026) \quad $|$ \quad \textbf{Ingl\^es:} Avan\c{c}ado \quad $|$ \quad \textbf{Portugu\^es:} Nativo.
 \end{itemize}
 
 \end{document}
